@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--стили-->
+    <link rel="stylesheet" href="css/Main.css">
+    <!--шрифты-->
+    <link rel="stylesheet" href="font/stylesheet.css">
+    <!--лого для title-->
+    <link rel="icon" href="img/TitleLogo.png" type="image/png">
+    <!--ссылка для слайдера-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="../fullPage.js-master/"></script>
+    <!--скрипт для слайдера-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.3/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--названия страницы-->
+    <title>TKR - Главная</title>
+</head>
+
+<body class="page">
+    <div class="header">
+        <header>
+            <!--лого в header-->
+            <img class="logo-images" src="img/logo.png" alt="Логотип">
+            <!--ссылка 1-->
+            <h2 class="main-h1"><b><a class="transition-link" href="index.html">Главная</a></b></h2>
+            <!--Каталог-->
+            <h2 class="catalog-h1">Каталог</h2>
+            <!-- Пример ссылки для перехода на другую страницу в каталоге -->
+            <ul class="catalog-menu" id="catalog-menu">
+                <li>
+                    <img src="img/catalog1.png" alt="">
+                    <a href="html/MechanicalEngineering.html" class="transition-link">
+                        <h5>Виртуальные лаборатории</h5>
+                        <h3>Машиностроение</h3>
+                    </a>
+                </li>
+                <li>
+                    <img src="img/catalog3.png" alt="">
+                    <a href="html/CarsAndTransport.html" class="transition-link">
+                        <h5>Виртуальные лаборатории</h5>
+                        <h3>Автомобили и транспорт</h3>
+                    </a>
+                </li>
+                <li>
+                    <img src="img/catalog4.png" alt="">
+                    <a href="html/CollectiveFarmMachines.html" class="transition-link">
+                        <h5>Виртуальные лаборатории</h5>
+                        <h3>Сельскохозяйственные машины</h3>
+                    </a>
+                </li>
+            </ul>
+            <!-- Элемент круга для анимации -->
+            <div id="circle"></div>
+            <!--будущия ссылка 2-->
+            <h2 class="reviews-h1">Отзывы</h2>
+            <!-- Надпись "О компании" -->
+            <h2 id="aboutCompany" class="AboutCompany-h1"><a href="#aboutUs" id="scrollToAboutUs">О компании</a></h2>
+            <!--будущая ссылка 4-->
+            <h2 class="contacts-h1"><a href="#footer">Контакты</a></h2>
+                <!--кнопка-->
+                <a class="codepen-button"><span>Оставить заявку</span></a>            
+        </header>
+        <!-- Модальное окно для отзывов -->
+        <div id="reviewsModal" class="modal">
+            <div class="close">&times;</div>
+            <div class="reviews-container">
+                <div class="reviews-content">
+                    <div class="review">
+                        <a href="img/reviews1.jpg" target="_blank"><img src="img/reviews1.jpg" alt="Review 1"></a>
+                    </div>
+                    <div class="review">
+                        <a href="img/reviews2.jpg" target="_blank"><img src="img/reviews2.jpg" alt="Review 2"></a>
+                    </div>
+                    <div class="review">
+                        <a href="img/reviews3.jpg" target="_blank"><img src="img/reviews3.jpg" alt="Review 3"></a>
+                    </div>
+                    <div class="review">
+                        <a href="img/reviews4.jpg" target="_blank"><img src="img/reviews4.jpg" alt="Review 4"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Поиск-->
+        <div class="form-head">
+            <form action="/search" method="get">
+                <input id="search-input" type="text" name="search" placeholder="Поиск ...">
+                <button id="search" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <img class="logo-images2" src="img/logo.png" alt="Логотип">
+        <!--Просто надпись-->
+        <h1 class="equipment"><b>Учебное<br>оборудование</b></h1>
+        <!--картинка с коровой-->
+        <img class="imagesVR" src="img/image-vr.png" alt="VR">
+        <div class="header-mobile-menu">
+            <!-- hamburger -->
+            <input type="checkbox" id="navi-toggle" class="checkbox" />
+            <label for="navi-toggle" class="button">
+                <span class="icon">&nbsp;</span>
+            </label>
+            <div class="background">&nbsp;</div>
+            <nav class="nav">
+                <ul class="list">
+                    <img class="logo-images" src="img/logo.png" alt="Логотип">
+                    <li class="item">
+                        <a class="link" href="index.html">
+                            <h2 class="main-h1">Главная</h2>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a class="link catalog-link">
+                            <h2 class="catalog-h1"><a href="#catalog-menu" id="catalogLink">Каталог</a></h2>
+                        </a>
+                        <ul class="submenu" id="catalogSubmenu">
+                            <li>
+                                <a href="html/MechanicalEngineering.html" class="transition-link">
+                                    <h3>Машиностроение</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="html/CarsAndTransport.html" class="transition-link">
+                                    <h3>Автомобили и транспорт</h3>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="html/CollectiveFarmMachines.html" class="transition-link">
+                                    <h3>Сельскохозяйственные машины</h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#" id="reviews-link">
+                            <h2 class="reviews-h1">Отзывы</h2>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#aboutUs">
+                            <h2 id="aboutCompany" class="AboutCompany-h1">О компании</h2>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#footer">
+                            <h2 class="contacts-h1">Контакты</h2>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a class="codepen-button" href="#blog-feedbeek"><span>Оставить заявку</span></a>
+                    </li>
+                </ul>
+            </nav>            
+        </div>
+    </div>
+    <!--какая то инфа-->
+    <h1 class="lala">Мы предлагаем широкий спектр учебного оборудования, сочетающего в себе последние технологии,
+        практическую применимость и образовательные потребности.</h1>
+    <!--Слайдер -->
+    <div class="swiper mySwiper1">
+        <div class="inf-new">
+            <h3>Новые разработки</h3>
+        </div>
+        <div class="swiper-wrapper">
+            <!-- 1 слайд -->
+            <div class="swiper-slide" id="slide1">
+                <div class="info">
+                    <div class="info-text">
+                        <h5>Виртуальная лаборатория</h5>
+                        <h1>Тренажер вождения<br>категории В</h1>
+                        <br>
+                        <h5>Наши инновационные тренажеры для вождения авто B и C категорий создают реалистичные
+                            симуляции дорожных ситуаций, обеспечивая безопасную подготовку водителей к реальным дорожным
+                            условиям.</h5>
+                        <div id="slider-inf-img-1" class="slider-inf-img">
+                            <div class="slide-inf" id="slide-inf1"><img src="img/car1.png" alt="Image 1"></div>
+                            <div class="slide-inf" id="slide-inf2"><img src="img/car2.png" alt="Image 2"></div>
+                            <div class="slide-inf" id="slide-inf3"><img src="img/car3.png" alt="Image 3"></div>
+                        </div>
+                        <button class="info-text-btn"><h3>></h3></button>
+                        <h4>Стоимость по запросу</h4>
+                    </div>
+                    <div class="ImgSlide">
+                        <div class="img-new"><img src="img/new.png" alt="new"></div>
+                        <div class="slide"><img src="img/CarSlade1.png" alt="Image 1"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 слайд -->
+            <div class="swiper-slide" id="slide2">
+                <div class="info">
+                    <div class="info-text">
+                        <h5>Виртуальная лаборатория</h5>
+                        <h1>Тренажер вождения<br>категории Ве</h1>
+                        <br>
+                        <h5>Реалистичный инновационный тренажер для обучения вождению автомобилей категорий B и C,
+                            который обеспечивает безопасную и эффективную подготовку водителей к реальным дорожным
+                            условиям.</h5>
+                        <div id="slider-inf-img-2" class="slider-inf-img">
+                            <div class="slide-inf" id="slide-inf1"><img src="img/car1.png" alt="Image 1"></div>
+                            <div class="slide-inf" id="slide-inf2"><img src="img/car2.png" alt="Image 2"></div>
+                            <div class="slide-inf" id="slide-inf3"><img src="img/car3.png" alt="Image 3"></div>
+                        </div>
+                        <button class="info-text-btn"><h3>></h3></button>
+                        <h4>Стоимость по запросу</h4>
+                    </div>
+                    <div class="ImgSlide">
+                        <div class="img-new"><img src="img/new.png" alt="new"></div>
+                        <div class="slide"><img src="img/CarSlade2.png" alt="Image 1"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 слайд -->
+            <div class="swiper-slide" id="slide3">
+                <div class="info">
+                    <div class="info-text">
+                        <h5>Виртуальная лаборатория</h5>
+                        <h1>Тренажер вождения<br>категории С</h1>
+                        <br>
+                        <h5>Мы разрабатываем тренажеры для вождения, которые помогают водителям развивать навыки
+                            безопасного управления автомобилями B и C категорий, предоставляя реалистичные симуляции
+                            дорожных сценариев.</h5>
+                        <div id="slider-inf-img-3" class="slider-inf-img">
+                            <div class="slide-inf" id="slide-inf1"><img src="img/car1.png" alt="Image 1"></div>
+                            <div class="slide-inf" id="slide-inf2"><img src="img/car2.png" alt="Image 2"></div>
+                            <div class="slide-inf" id="slide-inf3"><img src="img/car3.png" alt="Image 3"></div>
+                        </div>
+                        <button class="info-text-btn"><h3>></h3></button>
+                        <h4>Стоимость по запросу</h4>
+                    </div>
+                    <div class="ImgSlide">
+                        <div class="img-new"><img src="img/new.png" alt="new"></div>
+                        <div class="slide"><img src="img/CarSlade3.png" alt="Image 1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--кнопки слайдера-->
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- Блок "О компании" -->
+    <div class="inf" id="inf">
+        <div class="aboutUs" id="aboutUs">
+            <div class="about-us-header">
+                <h2>О нас</h2>
+                <div class="imgVr">
+                    <img src="img/vr.png" alt="ImgVr">
+                </div>
+            </div>
+            <div class="about-us-inf">
+                <h4>Мы – глобальная команда разработчиков, дизайнеров, стратегов и менеджеров по качеству,
+                    сфокусированная на создании инновационных продуктов и услуг. Наша цель – обеспечить высокое качество
+                    и безупречный пользовательский опыт. Мы стремимся к постоянному совершенствованию, используя
+                    передовые технологии и методы работы. Наше разнообразие талантов и опыта позволяет нам достигать
+                    общих целей и воплощать самые амбициозные идеи.</h4>
+            </div>
+        </div>
+        <div class="dop-inf">
+            <div>
+                <h1 id="yearsOnMarket">0</h1>
+                <h3>лет на рынке</h3>
+            </div>
+            <div>
+                <h2 class="pink-inf">></h2>
+                <h1 id="equipmentsSold">0</h1>
+                <h3>оснастили учебных<br>заведений</h3>
+            </div>
+            <div>
+                <h2 class="pink-inf1">+</h2>
+                <h1 id="projectsCompleted">0</h1>
+                <h3>Реализованных<br>проектов</h3>
+            </div>
+        </div>
+    </div>
+    <div class="feedback" id="feedback">
+        <div class="feedback-left">
+            <div class="feedback-inf">
+                <div class="ball1"><img src="img/ball.png" alt="ball1"></div>
+                <h1>Свяжитесь с нами</h1>
+                <h3>Для получения стоимости и более детальной информации, пожалуйста, заполните приведенную форму. Наши
+                    менеджеры свяжутся с вами в кратчайшие сроки, чтобы помочь вам с подбором оптимального учебного
+                    оборудования, отвечающего всем вашим потребностям.<br>Мы гарантируем конфиденциальность и
+                    безопасность предоставленных вами сведений.</h3>
+                <div class="ball2"><img src="img/ball.png" alt="ball2"></div>
+            </div>
+            <div class="feedback-dop-inf">
+                <h1>Контакты</h1>
+                <h3>+7(778)466-93-90 / +7(778) 466-77-86</h3>
+                <h3>info@tkrgroup.org</h3>
+            </div>
+        </div>
+        <div class="blog-feedbeek" id="blog-feedbeek">
+            <script data-b24-form="inline/4/meww3r" data-skip-moving="true">
+                (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+                })(window,document,'https://cdn-ru.bitrix24.ru/b29804332/crm/form/loader_4.js');
+            </script>
+        </div>
+    </div>
+    <div class="swiper mySwiper2">
+        <div class="inf-new">
+            <h3>Бестселлеры</h3>
+        </div>
+        <div class="swiper-wrapper">
+            <!-- 1 слайд -->
+            <div class="swiper-slide2" id="slide2-1">
+                <div class="info2">
+                    <div class="slide2"><img src="img/ImgSlader2.png" alt="Image 1"></div>
+                    <div class="info-text2">
+                        <h4>Виртуальная лаборатория</h4>
+                        <h2>Техническое обслуживание<br>автомобиля</h2>
+                        <br>
+                        <h4>Стоимость по запросу</h4>
+                        <button class="info-text2-btn"><h4>></h4></button>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 слайд -->
+            <div class="swiper-slide2" id="slide2-2">
+                <div class="info2">
+                    <div class="slide2"><img src="img/ImgSlader1.png" alt="Image 1"></div>
+                    <div class="info-text2">
+                        <h4>Виртуальная лаборатория</h4>
+                        <h2>Техническое обслуживание<br>легкового автомобиля</h2>
+                        <br>
+                        <h4>Стоимость по запросу</h4>
+                        <button class="info-text2-btn"><h4>></h4></button>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 слайд -->
+            <div class="swiper-slide2" id="slide2-3">
+                <div class="info2">
+                    <div class="slide2"><img src="img/ImgSlader2.png" alt="Image 1"></div>
+                    <div class="info-text2">
+                        <h4>Виртуальная лаборатория</h4>
+                        <h2>Техническое обслуживание<br>автомобиля</h2>
+                        <br>
+                        <h4>Стоимость по запросу</h4>
+                        <button class="info-text2-btn"><h4>></h4></button>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 слайд -->
+            <div class="swiper-slide2" id="slide2-4">
+                <div class="info2">
+                    <div class="slide2"><img src="img/ImgSlader1.png" alt="Image 1"></div>
+                    <div class="info-text2">
+                        <h4>Виртуальная лаборатория</h4>
+                        <h2>Техническое обслуживание<br>автомобиля</h2>
+                        <br>
+                        <h4>Стоимость по запросу</h4>
+                        <button class="info-text2-btn"><h4>></h4></button>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- кнопки слайдера -->
+        <div class="swiper-pagination2"></div>
+    </div>
+    <div class="footer" id="footer">
+        <!--лого в header-->
+        <div class="logo-footer">
+            <img class="logo-images1" src="img/logo.png" alt="Логотип">
+            <h5>Создаем инновации для<br>эффективного образования</h5>
+        </div>
+        <h3>Контакты</h3>
+        <h4>+7 (778) 466-93-90 / +7 (778) 466-77-86<br>info@tkrgroup.org</h4>
+        <div class="img-footer">
+           <a href="https://www.youtube.com/channel/UCL81kyk2OyOhIrlIyurNOJA" target="_blank">
+                <div class="ImgY">
+                    <img src="img/img-y.png" alt="YouTube">
+                </div>
+            </a>
+        </div>
+        <div class="newsletter">
+            <script data-b24-form="inline/2/adu9vf" data-skip-moving="true">
+                (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+                })(window,document,'https://cdn-ru.bitrix24.ru/b29804332/crm/form/loader_2.js');
+            </script>
+        </div>
+    </div>
+    <!--подключения js-->
+    <script src="js/Main.js"></script>
+</body>
+</html>
