@@ -143,55 +143,55 @@ function isElementInViewport(el) {
     );
 }
 
-        // Анимация шариков
-        var ball1 = document.querySelector('.ball1');
-        var ball2 = document.querySelector('.ball2');
-        var ball3 = document.querySelector('.ball3');
-        var ball4 = document.querySelector('.ball4');
-        var ball5 = document.querySelector('.ball5');
-    
-        function moveUp(ball) {
-            ball.style.transition = 'transform 5s ease';
-            ball.style.transform = 'translateY(-30px)';
-        }
-    
-        function moveDown(ball) {
-            ball.style.transition = 'transform 5s ease';
-            ball.style.transform = 'translateY(0)';
-        }
-    
-        setInterval(function() {
-            moveUp(ball1);
-            setTimeout(function() {
-                moveDown(ball1);
-            }, 1000);
-        }, 2000);
-    
-        setInterval(function() {
-            moveUp(ball2);
-            setTimeout(function() {
-                moveDown(ball2);
-            }, 1000);
-        }, 2000);
-    
-        setInterval(function() {
-            moveUp(ball3);
-            setTimeout(function() {
-                moveDown(ball3);
-            }, 1000);
-        }, 2000);
-        setInterval(function() {
-            moveUp(ball4);
-            setTimeout(function() {
-                moveDown(ball4);
-            }, 1000);
-        }, 2000);
-        setInterval(function() {
-            moveUp(ball5);
-            setTimeout(function() {
-                moveDown(ball5);
-            }, 1000);
-        }, 2000);
+    // Анимация шариков
+    var ball1 = document.querySelector('.ball1');
+    var ball2 = document.querySelector('.ball2');
+    var ball3 = document.querySelector('.ball3');
+    var ball4 = document.querySelector('.ball4');
+    var ball5 = document.querySelector('.ball5');
+
+    function moveUp(ball) {
+        ball.style.transition = 'transform 5s ease';
+        ball.style.transform = 'translateY(-30px)';
+    }
+
+    function moveDown(ball) {
+        ball.style.transition = 'transform 5s ease';
+        ball.style.transform = 'translateY(0)';
+    }
+
+    setInterval(function() {
+        moveUp(ball1);
+        setTimeout(function() {
+            moveDown(ball1);
+        }, 1000);
+    }, 2000);
+
+    setInterval(function() {
+        moveUp(ball2);
+        setTimeout(function() {
+            moveDown(ball2);
+        }, 1000);
+    }, 2000);
+
+    setInterval(function() {
+        moveUp(ball3);
+        setTimeout(function() {
+            moveDown(ball3);
+        }, 1000);
+    }, 2000);
+    setInterval(function() {
+        moveUp(ball4);
+        setTimeout(function() {
+            moveDown(ball4);
+        }, 1000);
+    }, 2000);
+    setInterval(function() {
+        moveUp(ball5);
+        setTimeout(function() {
+            moveDown(ball5);
+        }, 1000);
+    }, 2000);
 
     // Инициализируем второй слайдер
     var swiper2 = new Swiper(".mySwiper2", {
