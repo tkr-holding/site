@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--стили-->
+        <link rel="stylesheet" href="../../css/CssCarsAndTransportMore/3dCarModel.css">
+        <!--шрифты-->
+        <link rel="stylesheet" href="../../font/stylesheet.css">
+        <!--лого для title-->
+        <link rel="icon" href="../../img/TitleLogo.png" type="image/png">
+        <!--ссылка для слайдера-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <script src="../../fullPage.js-master/"></script>
+        <!--скрипт для слайдера-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.3/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--названия страницы-->
+        <title>TKR - Вождение автомобиля</title>
+    </head>
+    
+    <body class="page">
+        <div class="header">
+            <header>
+                <!--лого в header-->
+                <img class="logo-images" src="../../img/logo.png" alt="Логотип">
+                <!--ссылка 1-->
+                <h2 class="main-h1"><b><a class="transition-link" href="../../index.html">Главная</a></b></h2>
+                <!--Каталог-->
+                <h2 class="catalog-h1">Каталог</h2>
+                <!-- Пример ссылки для перехода на другую страницу в каталоге -->
+                <ul class="catalog-menu" id="catalog-menu">
+                    <li>
+                        <img src="../../img/catalog1.png" alt="">
+                        <a href="../MechanicalEngineering.html" class="transition-link">
+                            <h5>Виртуальные лаборатории</h5>
+                            <h3>Машиностроение</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="../../img/catalog3.png" alt="">
+                        <a href="../CarsAndTransport.html" class="transition-link">
+                            <h5>Виртуальные лаборатории</h5>
+                            <h3>Автомобили и транспорт</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="../../img/catalog4.png" alt="">
+                        <a href="../CollectiveFarmMachines.html" class="transition-link">
+                            <h5>Виртуальные лаборатории</h5>
+                            <h3>Сельскохозяйственные машины</h3>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Элемент круга для анимации -->
+                <div id="circle"></div>
+                <!--будущия ссылка 2-->
+                <h2 class="reviews-h1">Отзывы</h2>
+                <h2 class="AboutCompany-h1"><a href="../../index.html#aboutUs" target="_blank">О компании</a></h2>
+                <!--будущая ссылка 4-->
+                <h2 class="contacts-h1"><a href="#footer">Контакты</a></h2>
+                <!--кнопка-->
+                <a class="codepen-button" href="#blog-feedbeek"><span>Оставить заявку</span></a>            
+            </header>
+            <!-- Модальное окно для отзывов -->
+            <div id="reviewsModal" class="modal">
+                <div class="close">&times;</div>
+                <div class="reviews-container">
+                    <div class="reviews-content">
+                        <div class="review">
+                            <a href="../../img/reviews1.jpg" target="_blank"><img src="../../img/reviews1.jpg" alt="Review 1"></a>
+                        </div>
+                        <div class="review">
+                            <a href="../../img/reviews2.jpg" target="_blank"><img src="../../img/reviews2.jpg" alt="Review 2"></a>
+                        </div>
+                        <div class="review">
+                            <a href="../../img/reviews3.jpg" target="_blank"><img src="../../img/reviews3.jpg" alt="Review 3"></a>
+                        </div>
+                        <div class="review">
+                            <a href="../../img/reviews4.jpg" target="_blank"><img src="../../img/reviews4.jpg" alt="Review 4"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Поиск-->
+            <div class="form-head">
+                <form action="/search" method="get">
+                    <input id="search-input" type="text" name="search" placeholder="Поиск ...">
+                    <button id="search" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <img class="logo-images2" src="../../img/logo.png" alt="Логотип">
+            <!--Просто надпись-->
+            <div class="ladel">
+                <h4><b>Виртуальная лаборатория</b></h4>
+                <h1><b>Вождение автомобиля</b></h1>
+            </div>
+            <!--картинка с коровой-->
+            <img class="imagesVR" src="../../img/3dCarModel.png" alt="VR">
+            <div class="header-mobile-menu">
+                <!-- hamburger -->
+                <input type="checkbox" id="navi-toggle" class="checkbox" />
+                <label for="navi-toggle" class="button">
+                    <span class="icon">&nbsp;</span>
+                </label>
+                <div class="background">&nbsp;</div>
+                <nav class="nav">
+                    <ul class="list">
+                        <img class="logo-images" src="../../img/logo.png" alt="Логотип">
+                        <li class="item">
+                            <a class="link" href="../../index.html">
+                                <h2 class="main-h1">Главная</h2>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a class="link catalog-link">
+                                <h2 class="catalog-h1"><a href="#catalog-menu" id="catalogLink">Каталог</a></h2>
+                            </a>
+                            <ul class="submenu" id="catalogSubmenu">
+                                <li>
+                                    <a href="../MechanicalEngineering.html" class="transition-link">
+                                        <h3>Машиностроение</h3>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../CarsAndTransport.html" class="transition-link">
+                                        <h3>Автомобили и транспорт</h3>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../CollectiveFarmMachines.html" class="transition-link">
+                                        <h3>Сельскохозяйственные машины</h3>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="#" id="reviews-link">
+                                <h2 class="reviews-h1">Отзывы</h2>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="#aboutUs">
+                                <h2 id="aboutCompany" class="AboutCompany-h1">О компании</h2>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a class="link" href="#footer">
+                                <h2 class="contacts-h1">Контакты</h2>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a class="codepen-button" href="#blog-feedbeek"><span>Оставить заявку</span></a>
+                        </li>
+                    </ul>
+                </nav> 
+            </div>
+        </div>
+        
+        <!-- Слайдер на заднем плане -->
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide2">
+                        <video id="tractor" controlslist="video1" autoplay muted loop>
+                            <source src="../../img/kindling.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="descriptions">
+            <div class="descriptions-left">
+                <div class="descriptions-inf">
+                    <div class="ball1"><img src="../../img/ball.png" alt="ball1"></div>
+                    <h1>Описания</h1>
+                    <h3>TKR CAR DRIVING — это тренажер для вождения автомобиля в виртуальной среде, разработанный на основе современных компьютерных и инженерных технологий. Тренажер позволяет учащимся отрабатывать и совершенствовать навыки вождения автомобиля в симулированной обстановке. Он способствует развитию моторных навыков без использования расходных материалов.</h3>
+                    <div class="ball2"><img src="../../img/ball.png" alt="ball2"></div>
+                </div>
+                <div class="ball3"><img src="../../img/ball.png" alt="ball3"></div>
+            </div>
+            <div class="forma-descriptions" id="feedbackForm">
+                <form id="descriptions-form">
+                    <h1 class="section-title">Режимы</h1>
+                    <div class="grid-container">
+                        <div class="training">
+                            <img src="../../img/training.png" alt="Обучения">
+                            <h4>Обучения</h4>
+                        </div>
+                        <div class="exam">
+                            <img src="../../img/exam.png" alt="Экзамены">
+                            <h4>Экзамены</h4>
+                        </div>
+                    </div>
+                    <h1 class="section-title">Языки</h1>
+                    <div class="grid-container">
+                        <div class="language">
+                            <img src="../../img/flagkz.png" alt="Казахский">
+                            <h4>Казахский</h4>
+                        </div>
+                        <div class="language">
+                            <img src="../../img/flagru.png" alt="Русский">
+                            <h4>Русский</h4>
+                        </div>
+                    </div>
+                </form>
+            </div>            
+        </div>
+
+        <div class="SkillTraining">
+            <h1>Отработка навыков</h1>
+            <div class="STgrid-container">
+                <h2>Тренажер TKR CAR DRIVING предоставляет широкие возможности для совершенствования различных аспектов вождения. Учащиеся могут отрабатывать маневрирование в сложных дорожных условиях, тренировать свою реакцию на непредвиденные ситуации и улучшать общую координацию движений. Виртуальная среда позволяет моделировать различные сценарии и дорожные ситуации, обеспечивая безопасное обучение без риска и затрат на топливо или другие расходные материалы. Это помогает развить уверенность за рулем и подготовиться к реальным условиям, делая процесс обучения более эффективным и доступным.</h2>
+            </div>
+        </div>
+           
+
+        <div class="feedback" id="feedback">
+            <div class="feedback-left">
+                <div class="feedback-inf">
+                    <div class="ball1"><img src="../../img/ball.png" alt="ball1"></div>
+                    <h1>Свяжитесь с нами</h1>
+                    <h3>Для получения стоимости и более детальной информации, пожалуйста, заполните приведенную форму. Наши
+                        менеджеры свяжутся с вами в кратчайшие сроки, чтобы помочь вам с подбором оптимального учебного
+                        оборудования, отвечающего всем вашим потребностям.<br>Мы гарантируем конфиденциальность и
+                        безопасность предоставленных вами сведений.</h3>
+                    <div class="ball2"><img src="../../img/ball.png" alt="ball2"></div>
+                </div>
+                <div class="feedback-dop-inf">
+                    <h1>Контакты</h1>
+                    <h3>+7(778)466-93-90 / +7(778) 466-77-86</h3>
+                    <h3>info@tkrgroup.org</h3>
+                </div>
+            </div>
+            <div class="blog-feedbeek" id="blog-feedbeek">
+                <script data-b24-form="inline/4/meww3r" data-skip-moving="true">
+                    (function(w,d,u){
+                    var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+                    var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+                    })(window,document,'https://cdn-ru.bitrix24.ru/b29804332/crm/form/loader_4.js');
+                </script>
+            </div>
+        </div>
+        
+        <div class="footer" id="footer">
+            <!--лого в header-->
+            <div class="logo-footer">
+                <img class="logo-images1" src="../../img/logo.png" alt="Логотип">
+                <h5>Создаем инновации для<br>эффективного образования</h5>
+            </div>
+            <h3>Контакты</h3>
+            <h4>+7 (778) 466-93-90 / +7 (778) 466-77-86<br>info@tkrgroup.org</h4>
+            <div class="img-footer">
+                <a href="https://www.youtube.com/channel/UCL81kyk2OyOhIrlIyurNOJA" target="_blank">
+                    <div class="ImgY">
+                        <img src="../../img/img-y.png" alt="YouTube">
+                    </div>
+                </a>
+            </div>
+            <div class="newsletter">
+                <script data-b24-form="inline/2/adu9vf" data-skip-moving="true">
+                    (function(w,d,u){
+                    var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+                    var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+                    })(window,document,'https://cdn-ru.bitrix24.ru/b29804332/crm/form/loader_2.js');
+                </script>
+            </div>
+        </div>
+        <script src="../../js/JsCarsAndTransportMore/3dCarModel.js"></script>        
+    </body>
+</html>
