@@ -184,55 +184,84 @@ li {
     font-size: 10px;
     color: #000000;
 }
-
-/* Установим базовый стиль для списка */
-.catalog-menu {
-    display: none; /* Скрываем меню по умолчанию */
-    position: absolute; /* Позиционируем абсолютно относительно родительского элемента */
-    z-index: 109; /* Устанавливаем передний план */
-    background-color: white; /* Белый фон */
-    border-radius: 10px; /* Скругляем углы */
-    padding: 10px; /* Добавляем отступы */
-    width: 350px; /* Ширина меню */
-    left: calc(40% - 130px); /* Положение по центру относительно родителя */
-    top: calc(27% + 20px); /* Отступ сверху */
+.catalog-container {
+    position: relative; /* Ensure the parent container is relatively positioned */
 }
 
-.catalog-menu img{
+.catalog-menu {
+    display: none; /* Hide by default */
+    position: absolute; /* Absolutely position relative to parent */
+    z-index: 1000;
+    background-color: white;
+    border-radius: 0px 10px 10px 10px;
+    padding: 10px;
+    width: 350px;
+    left: 0; /* Align to the left of the parent */
+    top: 75%; /* Position below the parent */
+}
+
+.catalog-menu img {
     width: 6vh;
     height: 6vh;
 }
 
-/* Установим стиль для пунктов меню */
 .catalog-menu li {
-    display: flex; /* Располагаем элементы в строку */
-    align-items: center; /* Выравниваем элементы по вертикали */
-    padding: 10px 0; /* Добавляем внутренний отступ сверху и снизу */
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
 }
 
-/* Уменьшим размер текста в пунктах меню */
 .catalog-menu li h3 {
     font-size: 16px;
+    color: #333;
 }
+
 .catalog-menu li h5 {
     font-size: 10px;
     color: #949494;
 }
-.catalog-menu li h3 {
-    color: #333;
-}
-/* Установим стиль для изображений в пунктах меню */
+
 .catalog-menu li img {
-    margin-right: 10px; /* Отступ справа от изображения */
+    margin-right: 10px;
+}
+
+.catalog-menu li:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.catalog-h1 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    margin: -10 auto; /* Center the heading container */
+}
+
+.catalog-h1.clicked {
+    border-radius: 10px 10px 0px 0px;
+    background-color: white;
+    color: black;
 }
 
 .contacts-h1,
 .reviews-h1,
 .AboutCompany-h1,
 .catalog-h1 {
+    cursor: pointer;
+    z-index: 999;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-family: 'Magistral Light';
 }
 
+/* Добавим стиль при наведении на пункты меню */
+.catalog-menu li:hover {
+    background-color: #f5f5f5; /* Изменяем фон при наведении */
+    cursor: pointer; /* Изменяем курсор */
+}
 a{
     text-decoration: none;
     color: #ffffff;
@@ -288,31 +317,6 @@ a{
   
 .form-head button:hover {
     background: #da6aba;
-}
-
-
-/* Установим стиль для заголовка "Каталог" */
-.catalog-h1 {
-    padding-bottom: 10px !important;
-    font-family: 'Magistral Light';
-    color: #ffffff; /* Белый цвет текста по умолчанию */
-    cursor: pointer;
-    padding: 10px 20px; /* Добавляем отступы для улучшения визуального восприятия */
-    position: relative; /* Установим относительное позиционирование */
-    z-index: 1000; /* Устанавливаем передний план */
-}
-
-/* Стили для заголовка "Каталог", когда он нажат */
-.catalog-h1.clicked {
-    border-radius: 10px 10px 0px 0px;
-    color: #000000; /* Черный цвет текста */
-    background-color: #ffffff; /* Белый цвет фона */
-}
-
-/* Добавим стиль при наведении на пункты меню */
-.catalog-menu li:hover {
-    background-color: #f5f5f5; /* Изменяем фон при наведении */
-    cursor: pointer; /* Изменяем курсор */
 }
 
 /* Стили для логотипа */
@@ -397,7 +401,6 @@ a{
 .item .catalog-h1 {
     font-size: 1.5rem;
 }
-
 .background {
     height: 4vh;
     width: 4vh;
@@ -449,6 +452,23 @@ a{
     position: relative;
 }
 
+.item .catalog-h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensure the header takes full width */
+    height: 40px; /* Set a fixed height */
+    margin: 0; /* Reset margin */
+}
+.item .catalog-h1 a {
+    width: 100%;
+    margin-left: -50%;
+    text-align: center;
+}
+.submenu li{
+    width: 100%;
+    margin-left: -10px;
+}
 .nav .catalog-link .submenu {
     display: none; /* Скрыть подменю по умолчанию */
     position: absolute;
@@ -472,7 +492,6 @@ a{
 }
 
 .nav .submenu li a {
-    margin-left: -5%;
     color: #ffffff;
     text-decoration: none;
     width: 90%; /* Сделать ссылку на всю ширину элемента списка */
@@ -482,7 +501,6 @@ a{
 .nav .submenu li a:hover {
     text-decoration: underline;
 }
-
 
 .list {
     position: absolute;
@@ -635,7 +653,7 @@ a{
     width: 100%;
     height: 100vh; /* Полная высота экрана */
     z-index: 1; /* Устанавливаем задний план */
-    margin-top: -18% !important; /* Позиционируем сверху страницы */
+    margin-top: -10% !important; /* Позиционируем сверху страницы */
 }
 
 .swiper-slide {
@@ -1184,10 +1202,19 @@ input[placeholder="Наименование разработки"] {
     font-family: 'Magistral Bold', sans-serif !important;
 }
 .blog-feedbeek {
+    padding-bottom: 0px;
+    overflow: hidden;
+    border-radius: 20px;
     width: 45%;
-    height: auto;
+    height: 55%;
     margin-top: 3%;
     margin-right: 5%;
+}
+@media (max-width: 768px) {
+    .blog-feedbeek {
+        width: 70%;
+        margin-right: 0%;
+    }
 }
 /* Устанавливаем шрифт для всего блока */
 .newsletter * {
@@ -1304,13 +1331,6 @@ input[placeholder="Наименование разработки"] {
         font-size: 20px;
     }
 }
-@media screen and (max-width: 1011px) {
-/* Установим базовый стиль для списка */
-.catalog-menu {
-    left: calc(44% - 130px); /* Положение по центру относительно родителя */
-    top: calc(27% + 20px); /* Отступ сверху */
-}
-}
 
 @media screen and (max-width: 1000px) {
 /* Стили для текста "Учебное оборудование" */
@@ -1330,34 +1350,6 @@ input[placeholder="Наименование разработки"] {
 .swiper{
     margin-top: -100px !important;
 }
-/* Установим базовый стиль для списка */
-.catalog-menu {
-    left: calc(42% - 130px); /* Положение по центру относительно родителя */
-    top: calc(30% + 20px); /* Отступ сверху */
-}
-}
-@media (max-width: 853px) {
-    /* Установим базовый стиль для списка */
-    .catalog-menu {
-        display: none;
-        /* Скрываем меню по умолчанию */
-        position: absolute;
-        /* Позиционируем абсолютно относительно родительского элемента */
-        z-index: 1000;
-        /* Устанавливаем передний план */
-        background-color: white;
-        /* Белый фон */
-        border-radius: 10px;
-        /* Скругляем углы */
-        padding: 10px;
-        /* Добавляем отступы */
-        width: 350px;
-        /* Ширина меню */
-        left: calc(45% - 80px);
-        /* Положение по центру относительно родителя */
-        top: calc(34% - 21px);
-        /* Отступ сверху */
-    }
 }
 @media (max-width: 768px) {
     .ladel{
@@ -1972,12 +1964,6 @@ input[placeholder="Наименование разработки"] {
         height: auto;
         padding: 15px;
     }
-    .blog-feedbeek {
-        width: 100%;
-        height: auto;
-        margin-top: 3%;
-        margin-left: 5%;
-    }
     .feedback-left{
         margin-left: -15%;
     }
@@ -1996,7 +1982,6 @@ input[placeholder="Наименование разработки"] {
         width: 100%;
         height: auto;
         margin-top: 3%;
-        margin-left: 5%;
     }
     .ladel{
         font-size: 1.8vh;
