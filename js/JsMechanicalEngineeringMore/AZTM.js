@@ -192,7 +192,7 @@ function isElementInViewport(el) {
             moveDown(ball5);
         }, 1000);
     }, 2000);
-    
+
     // Инициализируем второй слайдер
     var swiper2 = new Swiper(".mySwiper2", {
         slidesPerView: "auto",
@@ -201,7 +201,7 @@ function isElementInViewport(el) {
         pagination: {
             el: ".swiper-pagination2",
         },
-        mousewheel: true,
+        mousewheel: false,
         keyboard: true,
         initialSlide: 2,
         slideClass: "swiper-slide2", // Добавляем класс слайдам второго слайдера
@@ -587,7 +587,7 @@ document.addEventListener('DOMContentLoaded', function() {
             { queries: ['сварочное дело', 'сварочное дело vr', 'сварачное дело', 'сварачное дело vr', 'сварачнае дело', 'сварачнаи дело', 'сварачнаи дило', 'сворачнаи дило', 'дело', 'сварка', 'сварачное', 'сварочное', 'сварка vr', 'сварочнoe дело', 'сварочноe дело', 'сварачное дило', 'сварачное дело вр', 'сварка вр', 'сварка дело', 'дело сварка', 'сварка оборудование', 'оборудование сварка', 'сварочное агрегат', 'агрегат сварочное'], path: '../../html/HtmlMechanicalEngineeringMore/Welding.html' },
             { queries: ['азтм', 'азмт','Цилиндрический редуктор', 'редуктор', 'Цилиндрический', 'Целиндрический редуктор', 'Целендрический редуктор','Цилиндрический ридуктор', 'Цилиндрический редуктар', 'азтн', 'азмн', 'асмт', 'азптм', 'азотм', 'асотм', 'зтм', 'атм', 'азотом', 'азотом агрегат', 'агрегат азотом', 'установка азотом', 'азотом установка', 'оборудование азотом', 'азотом оборудование'], path: '../../html/HtmlMechanicalEngineeringMore/AZTM.html' }
         ];
-        
+
         // Функция поиска по запросу
         var found = searchItems.some(function(item) {
             if (item.queries.includes(query)) {

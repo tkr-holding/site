@@ -81,7 +81,6 @@ window.addEventListener('resize', checkCirclePosition);
             catalogTitle.classList.toggle('clicked');
         });
     }
-
     // Проверка видимости элемента
     function isElementInViewport(el) {
         var rect = el.getBoundingClientRect();
@@ -278,7 +277,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Инициализируем первый слайдер
     var swiper1 = new Swiper(".mySwiper1", {
         slidesPerView: 'auto',
-        spaceBetween: 20,
+        spaceBetween: 0,
         centeredSlides: true,
         pagination: {
             el: ".swiper-pagination",
@@ -291,7 +290,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Инициализируем второй слайдер
     var swiper2 = new Swiper(".mySwiper2", {
         slidesPerView: 'auto',
-        spaceBetween: 50,
+        spaceBetween: 20,
         centeredSlides: true,
         pagination: {
             el: ".swiper-pagination2",

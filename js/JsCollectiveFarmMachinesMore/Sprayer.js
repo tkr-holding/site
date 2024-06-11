@@ -192,6 +192,7 @@ function isElementInViewport(el) {
             moveDown(ball5);
         }, 1000);
     }, 2000);
+
     // Инициализируем второй слайдер
     var swiper2 = new Swiper(".mySwiper2", {
         slidesPerView: "auto",
@@ -200,7 +201,7 @@ function isElementInViewport(el) {
         pagination: {
             el: ".swiper-pagination2",
         },
-        mousewheel: true,
+        mousewheel: false,
         keyboard: true,
         initialSlide: 2,
         slideClass: "swiper-slide2", // Добавляем класс слайдам второго слайдера

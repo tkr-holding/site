@@ -201,7 +201,7 @@ function isElementInViewport(el) {
         pagination: {
             el: ".swiper-pagination2",
         },
-        mousewheel: true,
+        mousewheel: false,
         keyboard: true,
         initialSlide: 2,
         slideClass: "swiper-slide2", // Добавляем класс слайдам второго слайдера

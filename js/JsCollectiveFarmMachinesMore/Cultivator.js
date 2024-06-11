@@ -201,7 +201,7 @@ function isElementInViewport(el) {
         pagination: {
             el: ".swiper-pagination2",
         },
-        mousewheel: true,
+        mousewheel: false,
         keyboard: true,
         initialSlide: 2,
         slideClass: "swiper-slide2", // Добавляем класс слайдам второго слайдера
@@ -572,7 +572,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('search').addEventListener('click', function(event) {
         event.preventDefault(); // Prevent form submission
         var query = document.getElementById('search-input').value.trim().toLowerCase();
-        
+
         // Массив запросов и путей
         var searchItems = [
             { queries: ['вождения автомобиля', 'автомобиль', 'вождене автомобиля', 'вождене автмобиля', 'вождение автомобиля', 'вождение автомобиль', 'автомобиль вождение', 'автомобиль водение', 'автомобиль управления', 'автомобиль управление', 'управление автомобилем', 'управлене автомобилем', 'автомобилем водение', 'водение автомобилем', 'автомобиль водителя'], path: '../../html/HtmlCarsAndTransportMore/3dCarModel.html' },
