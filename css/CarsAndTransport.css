@@ -826,7 +826,7 @@ li {
 }
 
 .info-text2 h2 {
-    font-size: 21px;
+    font-size: 18px !important;
 }
 
 .info-text2-btn {
@@ -1143,9 +1143,6 @@ input[placeholder="Наименование разработки"] {
     color:#c2c2c2;
     padding-bottom: 5px;
 }
-.info-text2 h2{
-    font-size: 21px;
-}
 .info-text2-btn {
     cursor: pointer;
     padding-top: 5px;
@@ -1378,6 +1375,9 @@ input[placeholder="Наименование разработки"] {
 
 /* Медиа-запросы для адаптации на экранах меньшего размера */
 @media (max-width: 1200px) {
+    .info-text2 h2{
+        font-size: 16px !important;
+    }
     .info-text2-btn {
         margin-left: 200px !important; /* Устанавливаем горизонтальное положение кнопки */
     }
@@ -1483,7 +1483,7 @@ input[placeholder="Наименование разработки"] {
     padding-bottom: 5px;
 }
 .info-text2 h2{
-    font-size: 21px;
+    font-size: 18px;
 }
 .info-text2-btn {
     cursor: pointer;
